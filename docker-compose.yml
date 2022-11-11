@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+ proxy:
+  build:
+    context: .
+  restart: unless-stopped
+  ports:
+    - 1999:21099
+  networks:
+    - maito-network
+    - maito-server_maito-server
+  external_links:
+    - pgadmin:pgadmin
+    - src:src
+networks:
+  maito-network:
+    driver: bridge
+  maito-server_maito-server:
+    external: true
+  # maitocode_maitocode:
+  #   external: true
