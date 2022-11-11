@@ -12,13 +12,13 @@ services:
   ports:
     - ${NGINX_LISTEN_PORT}:${NGINX_LISTEN_PORT}
   networks:
-    - maito-network
+    - maito-proxy
     - maito-server_maito-server
   external_links:
     - pgadmin:pgadmin
     - src:src
 networks:
-  maito-network:
+  maito-proxy:
     driver: bridge
   maito-server_maito-server:
     external: true
