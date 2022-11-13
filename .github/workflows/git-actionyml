@@ -1,0 +1,16 @@
+name: maito-proxy runner
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  test_and_deploy:
+    runs-on: maito-proxy-runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: docker-compose build
+      - name: run
+        run: docker-compose up -d
