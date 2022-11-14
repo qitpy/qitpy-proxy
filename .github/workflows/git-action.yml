@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Down Containers
-        run: docker-compose down
+        run: set -e && docker-compose down
       - name: Build
         run: docker-compose build
       - name: run
