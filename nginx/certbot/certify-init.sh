@@ -13,9 +13,9 @@ echo "getting certificate"
 
 certbot certonly \
     --webroot \
-    --webroot-path "/vol/www/"
+    --webroot-path "/vol/www/" \
     -d "$DOMAIN" \
-    --email $EMAIL \
+    --email "$EMAIL"v\
     --rsa-key-size 4096 \
     --agree-tos \
     --noninteractive
