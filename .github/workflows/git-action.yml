@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: set env
-        run: cp .env.proxy ~/maito-proxy/_work/maito-proxy/maito-proxy/.env
+        run: cp ~/.env.proxy ~/maito-proxy/_work/maito-proxy/maito-proxy/.env
       - name: Down Containers
         run: docker-compose down || true
       - name: Build
