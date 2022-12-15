@@ -2,5 +2,5 @@
 
 set -e
 
-cd /home/ubuntu/maito-proxy/_work/maito-proxy/maito-proxy
+cd /home/ubuntu/qitpy-proxy/_work/qitpy-proxy/qitpy-proxy
 /usr/bin/docker-compose run --rm certbot certbot renew

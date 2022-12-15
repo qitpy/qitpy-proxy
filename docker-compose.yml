@@ -16,7 +16,7 @@ services:
       - proxy-dhparams:/vol/proxy
       - certbot-certs:/etc/letsencrypt
     networks:
-      - maito-proxy
+      - qitpy-proxy
     external_links:
       - pgadmin:pgadmin
       - src:src
@@ -32,12 +32,12 @@ services:
       - certbot-web:/vol/www
       - certbot-certs:/etc/letsencrypt
     networks:
-      - maito-proxy
+      - qitpy-proxy
     depends_on:
       - proxy
 
 networks:
-  maito-proxy:
+  qitpy-proxy:
     driver: bridge
 
 volumes:

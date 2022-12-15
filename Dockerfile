@@ -1,5 +1,5 @@
 FROM nginx:1.23-alpine
-LABEL maintainer="maitocode.com"
+LABEL maintainer="qitpy.com"
 
 COPY ./nginx/* /etc/nginx/
 COPY ./run.sh /run.sh
