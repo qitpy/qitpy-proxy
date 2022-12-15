@@ -17,7 +17,7 @@ if [ ! -f "/etc/letsencrypt/live/${DOMAIN}/fullchain.pem" ]; then
     echo "No SSL cert, enabling HTTP only.."
     envsubst < /etc/nginx/default.conf.tpl > /etc/nginx/conf.d/default.conf
 else
-    echo "SSL cert exists, anabling HTTPS..."
+    echo "SSL cert exists, enabling HTTPS..."
     envsubst < /etc/nginx/default-ssl.conf.tpl > /etc/nginx/conf.d/default.conf
 fi
 
