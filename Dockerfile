@@ -1,4 +1,4 @@
-FROM nginx:1.23-alpine
+FROM nginx:1.24-alpine
 LABEL maintainer="qitpy.com"
 
 COPY ./nginx/* /etc/nginx/
